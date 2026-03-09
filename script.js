@@ -2,7 +2,7 @@
 //  BANANABIRD PFP EDITOR — script.js
 // ================================
 
-// ─── CA (hardcoded fake Solana address) ───────────────────────
+// ─── CA  ───────────────────────
 const CA = '7xK9mRpLqW2nBvYsZdFjHcEuNtXaGiOe3kP5wQmVbRy';
 
 // ─── Trait config ─────────────────────────────────────────────
@@ -275,3 +275,4 @@ window.addEventListener('load', function() {
   }
 
 });
+
