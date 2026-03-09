@@ -88,7 +88,7 @@ const ctx    = canvas.getContext('2d');
 async function renderCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   
-  // Carrega todas as imagens em paralelo para performance
+  // 
   const loadPromises = LAYER_ORDER.map(async (category) => {
     const index = state[category];
     if (!index && index !== 0) return null;
@@ -98,7 +98,7 @@ async function renderCanvas() {
   
   const results = await Promise.all(loadPromises);
   
-  // Desenha na ordem correta
+  // 
   for (const result of results) {
     if (result && result.img) {
       ctx.drawImage(result.img, 0, 0, canvas.width, canvas.height);
@@ -106,10 +106,10 @@ async function renderCanvas() {
   }
 }
 
-// Context menu do canvas - comportamento padrão do navegador (já permite "Open image in new tab")
+// 
 canvas.addEventListener('contextmenu', function(e) {
-  // Não prevenir o comportamento padrão - isso permite "Open image in new tab"
-  // O navegador já lida com isso naturalmente
+  // 
+  // 
 });
 
 // ─── Trait Grid Builder ───────────────────────────────────────
@@ -193,18 +193,18 @@ function reset() {
   bumpBtn(document.getElementById('btnReset'));
 }
 
-// ─── Save PNG ────────────────────────────────────────────────
-// Função corrigida para download do PNG
+// ───  ────────────────────────────────────────────────
+// 
 
 function savePFP() {
-  // Cria um link temporário para download
+  // 
   const link = document.createElement('a');
   link.download = 'bananabird-' + Date.now() + '.png';
   
-  // Converte o canvas para data URL (mais compatível que toBlob para downloads)
+  // 
   link.href = canvas.toDataURL('image/png');
   
-  // Simula o clique para download
+  // 
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -265,12 +265,13 @@ document.getElementById('btnCopyCA').addEventListener('click', copyCA);
 buildTraitGrids();
 renderCanvas();
 
-// Garantir que o ticker comece imediatamente
+// 
 window.addEventListener('load', function() {
   const marquee = document.querySelector('marquee');
   if (marquee) {
-    // Força o reinício do marquee se necessário
+    // 
     marquee.stop();
     marquee.start();
   }
+
 });
