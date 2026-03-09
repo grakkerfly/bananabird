@@ -3,7 +3,7 @@
 // ================================
 
 // ─── CA  ───────────────────────
-const CA = 'contract address here';
+const CA = 'AgiEL3WHQqzzqg6USnZSeiZkeQXCpqnimL6EmAfpump';
 
 // ─── Trait config ─────────────────────────────────────────────
 const TRAITS = {
@@ -275,5 +275,6 @@ window.addEventListener('load', function() {
   }
 
 });
+
 
 
