@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BANANABIRD PFP MAKER !!!!!</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- MARQUEE TICKER -->
+  <div class="ticker-wrap">
+    <marquee behavior="scroll" direction="left" scrollamount="5" loop="-1">
+      🍌🐦 I love bananabird! &nbsp;&nbsp;&nbsp;&nbsp; 🍌🐦 BANANABIRD IS VERY IMPORTANT. HAS ANY1 GOT ANY RARES??? &nbsp;&nbsp;&nbsp;&nbsp; 🍌🐦 your fortune: good luck. &nbsp;&nbsp;&nbsp;&nbsp; 🍌🐦 the art of bananabird &nbsp;&nbsp;&nbsp;&nbsp;
+    </marquee>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-logo">
+      <span class="nav-title">bananabird<span class="nav-blink">█</span></span>
+    </div>
+    <div class="nav-links">
+      <a href="https://x.com/" target="_blank" class="nav-btn btn-x">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        &nbsp;twitter
+      </a>
+      <button class="nav-btn btn-ca" id="btnCopyCA">📋 copy ca</button>
+      <a href="https://dexscreener.com" target="_blank" class="nav-btn btn-dex">📈 dexscreener</a>
+    </div>
+  </nav>
+
+  <!-- MAIN HEADING -->
+  <div class="site-title-block">
+    <h1 class="site-title">maek ur own bananabird</h1>
+    <p class="site-sub">maek ur own bananabird in thsi supre moadern n timeles pfp maeker</p>
+  </div>
+
+  <main>
+
+    <!-- LEFT: CANVAS -->
+    <div class="left-col">
+      <div class="canvas-label">// ur pfp is heere // <span class="canvas-label-hint">(right click = saev or copy)</span></div>
+      <div class="canvas-container">
+        <canvas id="pfpCanvas" width="800" height="800"></canvas>
+      </div>
+      <div class="action-row">
+        <button class="act-btn btn-randomize" id="btnRandomize">🎲 randomize</button>
+        <button class="act-btn btn-save"      id="btnSave">💾 save</button>
+        <button class="act-btn btn-reset"     id="btnReset">❌ reset</button>
+      </div>
+    </div>
+
+    <!-- RIGHT: TRAITS -->
+    <div class="right-col">
+
+      <div class="trait-block">
+        <div class="trait-block-header">[bg]</div>
+        <div class="trait-grid" id="grid-bg"></div>
+      </div>
+
+      <div class="trait-block">
+        <div class="trait-block-header">[body]</div>
+        <div class="trait-grid" id="grid-body"></div>
+      </div>
+
+      <div class="trait-block">
+        <div class="trait-block-header">[accessories]</div>
+        <div class="trait-grid" id="grid-accessories">
+          <div class="trait-thumb none-thumb" data-category="accessories" data-index="0">NONE</div>
+        </div>
+      </div>
+
+      <div class="trait-block">
+        <div class="trait-block-header">[overlay]</div>
+        <div class="trait-grid" id="grid-overlay">
+          <div class="trait-thumb none-thumb" data-category="overlay" data-index="0">NONE</div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>all rights reserved - bananabird &nbsp;///&nbsp; not financial advice &nbsp;///&nbsp; do ur own research &nbsp;///&nbsp; or dont idc</p>
+    <p class="footer-sub">[ bananabird ]</p>
+  </footer>
+
+  <!-- CA TOAST -->
+  <div id="caToast" class="ca-toast">ca copied!! 🍌🍌🍌</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
